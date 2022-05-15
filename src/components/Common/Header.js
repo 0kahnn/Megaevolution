@@ -9,7 +9,7 @@ const Header = () => {
       <div className="custom-container">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent mt-3 mr-auto">
           <a class="navbar-brand" href="#">
-            <img src={logo} />{" "}
+            <img src={logo} alt="logo" />{" "}
           </a>
           <button
             class="navbar-toggler d-none"

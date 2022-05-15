@@ -33,17 +33,17 @@ const DesktopMenu = () => {
         <div className="mobile-view">
           <li className="nav-item px-0">
             <a className="nav-link" href="#">
-              <img src={usflag} className="flag" />
+              <img alt="usflag" src={usflag} className="flag" />
             </a>
           </li>
           <li className="nav-item px-0">
             <a className="nav-link" href="#">
-              <img src={koreaflag} className="flag" />
+              <img alt="koreaflag" src={koreaflag} className="flag" />
             </a>
           </li>
           <li className="nav-item px-0">
             <a className="nav-link" href="#">
-              <img src={japanflag} className="flag" />
+              <img alt="japanflag" src={japanflag} className="flag" />
             </a>
           </li>
         </div>
