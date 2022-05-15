@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 import logo from "../../assets/icons/logo.png";
 import usflag from "../../assets/icons/usflag.webp";
 import koreaflag from "../../assets/icons/koreaflag.webp";
 import japanflag from "../../assets/icons/japanflag.webp";
+import { Button, Offcanvas } from "react-bootstrap";
+import OffCanvasMenu from "./OffCanvasMenu";
+import { menuItems } from "./menuItems";
 
-export default function Header() {
+const Header = () => {
   return (
     <>
       <div className="custom-container">
@@ -14,7 +17,7 @@ export default function Header() {
             <img src={logo} />{" "}
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler d-none"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -24,44 +27,34 @@ export default function Header() {
           >
             <span class="navbar-toggler-icon"> </span>
           </button>
+          <OffCanvasMenu />
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex align-items-center justify-content-end">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Events
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Partners
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Roadmap
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Team
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link marketting" href="#">
-                  Marketing <span>Home</span>
-                </a>
-              </li>
-              <li className="nav-item ">
-                <a className="nav-link myspace" href="#">
-                  My Space
-                </a>
-              </li>
+              {menuItems.map((el, i) => {
+                return el.marketting ? (
+                  <li className="nav-item" key={i}>
+                    <a className="nav-link marketting" href="#">
+                      <span
+                        dangerouslySetInnerHTML={{ __html: el.name }}
+                      ></span>
+                    </a>
+                  </li>
+                ) : el.myspace ? (
+                  <li className="nav-item" key={i}>
+                    <a className="nav-link myspace" href="#">
+                      {el.name}
+                    </a>
+                  </li>
+                ) : (
+                  <li className="nav-item" key={i}>
+                    <a className="nav-link " href="#">
+                      {el.name}
+                    </a>
+                  </li>
+                );
+              })}
+
               <div className="mobile-view">
                 <li className="nav-item px-0">
                   <a className="nav-link" href="#">
@@ -85,4 +78,5 @@ export default function Header() {
       </div>
     </>
   );
-}
+};
+export default Header;

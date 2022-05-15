@@ -51,7 +51,7 @@
 :root {
   --body-back: #fcf6ff;
   --navs-a: #908da2;
-  --my-space: #ffc543;
+  --yellow: #ffc543;
 }
 
 .custom-container {
@@ -60,7 +60,7 @@
 
 body {
   background: var(--body-back) !important;
-  font-family: "Space Grotesk";
+  font-family: "Space Grotesk" !important;
   overflow-x: hidden;
 }
 
@@ -70,16 +70,44 @@ body {
 
 .nav-item a {
   color: var(--navs-a);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 .nav-item {
   margin: 0 0.3rem;
 }
+.offcanvas-toggler {
+  background: radial-gradient(
+        63.11% 63.11% at 31.97% 19.67%,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0) 69.79%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #ffc543;
+
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
 
 .marketting {
-  font-weight: 400 !important;
+  font-weight: 800 !important;
 }
 
 .marketting span {
@@ -98,11 +126,20 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
-  background: var(--my-space);
   border-radius: 25px;
   padding: 1.3rem 2.2rem !important;
   margin: 0 0.6rem;
-  box-shadow: rgba(54, 54, 54, 0.3) 0px 8px 24px;
+
+  background: radial-gradient(
+        63.11% 63.11% at 31.97% 19.67%,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0) 69.79%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #ffc543;
+  box-shadow: 2.71605px 25.8025px 42px rgba(80, 80, 80, 0.26);
+  border-radius: 25px;
 }
 
 .flag {
@@ -120,6 +157,89 @@ a:hover {
   text-decoration: none;
 }
 
+.auth-modal {
+  text-align: center;
+}
+
+.auth-modal .modal-content {
+  border-radius: 10px;
+}
+.blue-bar .modal-content {
+  box-shadow: 0px -5px 0px #2ab0ff, 2.71605px 25.8025px 42px rgb(80 80 80 / 26%);
+  border-radius: 20px;
+  border: 2px solid white;
+}
+.auth-modal .modal-header {
+  padding-bottom: 0;
+  border: 0;
+}
+.auth-modal .modal-header span {
+  font-size: 34px !important;
+}
+.auth-modal .modal-header button {
+  background-color: transparent !important;
+}
+.auth-modal .modal-body {
+  padding-bottom: 4rem;
+}
+.auth-modal p,
+.auth-modal h3 {
+  color: #0e0d39 !important;
+}
+.auth-modal button {
+  border: 0;
+}
+
+.thankyou-image {
+  max-width: 150px;
+}
+
+.buttons {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-blue {
+  color: white;
+  background-color: #0e0d39;
+  border-radius: 5px;
+}
+
+.btn-yellow {
+  background: radial-gradient(
+      63.11% 63.11% at 31.97% 19.67%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ffc543;
+  box-shadow: 4px 38px 62px rgb(14 13 57 / 20%);
+  border-radius: 25px;
+  color: black;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid #0e0d39 !important;
+  color: #0e0d39;
+  border-radius: 5px;
+}
+
 /*  */
 
 @media only screen and (max-width: 990px) {
@@ -130,5 +250,12 @@ a:hover {
   .mobile-view {
     display: flex;
     justify-content: center;
+  }
+}
+
+/* overriden */
+@media (min-width: 576px) {
+  .wide-modal .modal-dialog {
+    max-width: 650px !important;
   }
 }
