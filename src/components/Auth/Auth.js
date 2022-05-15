@@ -6,9 +6,6 @@ import SignUpForm from "./SignUpForm";
 
 export default function Auth() {
   const [isLoginActive, setIsLoginActive] = useState(false);
-  const loginHandler = () => {
-    setIsLoginActive(true);
-  };
 
   const formToggler = () => {
     setIsLoginActive(!isLoginActive);
