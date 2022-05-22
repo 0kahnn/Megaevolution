@@ -6,6 +6,7 @@ const Faqs = () => {
   return (
     <>
       <Layout>
+        <Spacer height="1" />
         <Faq />
         <Spacer height="5" />
       </Layout>

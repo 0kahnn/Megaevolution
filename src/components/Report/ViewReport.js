@@ -1,15 +1,11 @@
+import ReportHeader from "./ReportHeader";
+
 const ViewReport_ = () => {
   return (
     <>
       <div>
         {/* resolution start */}
-        <div className="container-fluid top-banner">
-          <div className="container ">
-            <div className="row">
-              <h3 className="text-center">Resolution Center</h3>
-            </div>
-          </div>
-        </div>
+        <ReportHeader isAdmin={false} />
         {/* resolution end */}
         <div className="container report-section reply-section">
           <div className="row d-flex justify-content-center">

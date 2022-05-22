@@ -15,7 +15,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="col-4 col-md-2">
+          <div className="col-sm-4 col-md-2">
             <h3>Community</h3>
             <ul className="list-unstyled">
               <li>
@@ -32,7 +32,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-4 col-md-2">
+          <div className="col-sm-4 col-md-2">
             <h3>Social</h3>
             <ul className="list-unstyled">
               <li>
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className=" col-4 col-md-2">
+          <div className=" col-sm-4 col-md-2">
             <h3>Resources</h3>
             <ul className="list-unstyled">
               <li>

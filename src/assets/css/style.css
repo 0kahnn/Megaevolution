@@ -445,6 +445,22 @@ h4 {
   border: 2px solid var(--border-color);
 }
 
+.report .btn-yellow {
+  background: radial-gradient(
+      63.11% 63.11% at 31.97% 19.67%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ffc543;
+
+  border-radius: 25px;
+  color: black;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+}
+
 .report h3 {
   padding-top: 4rem;
   font-size: 1.5rem !important;
@@ -510,7 +526,7 @@ input[type="number"]:focus,
 
 .report span {
   font-weight: 600;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
 }
 
 .select-options {
@@ -605,9 +621,15 @@ div {
   display: flex;
   align-items: center;
   text-align: center;
-  background: #ffc543;
+  background: radial-gradient(
+      63.11% 63.11% at 31.97% 19.67%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ffc543;
   border-radius: 25px;
-  padding: 1.3rem 2.2rem !important;
+  padding: 1rem 2.2rem !important;
   margin-right: 2rem;
 }
 
@@ -621,8 +643,12 @@ div {
 /* report reply page */
 .report form input {
   background-color: transparent !important;
-  opacity: 0;
+  /* opacity: 0; */
   border: 3px solid #edd6ff !important;
+}
+
+.report .form-control::placeholder {
+  color: #8b8b8b !important;
 }
 .report-header {
   padding: 0rem 6rem;
@@ -633,7 +659,105 @@ div {
   font-size: 1.2rem;
   font-weight: 400;
 }
+.report th {
+  font-weight: 300;
+  font-size: 14px;
+  color: #0e0d39;
+  padding-bottom: 10px;
+}
 
+.report td {
+  font-weight: 500;
+  color: #0e0d39;
+}
+.status-badge {
+  display: inline;
+  padding: 5px 14px;
+  text-align: right;
+  border-radius: 15px;
+  color: white !important;
+  font-size: 13px !important;
+  text-transform: uppercase;
+}
+.progressing-badge {
+  background-color: #5eb5a0;
+}
+
+.solved-badge {
+  background-color: #a8c56a;
+}
+
+.admin-badge {
+  margin-left: 1rem;
+  display: inline;
+  padding: 5px 14px;
+  text-align: right;
+  border-radius: 15px;
+  font-size: 13px !important;
+  background-color: #edd6ff;
+  vertical-align: middle;
+}
+
+.table-dropdown button {
+  background-color: transparent;
+  font-size: 14px;
+  color: #0e0d39;
+  border: 0;
+  padding: 0;
+}
+.table-dropdown button:hover,
+.table-dropdown button:focus,
+.table-dropdown button:active {
+  background-color: transparent !important;
+  color: #0e0d39 !important;
+  box-shadow: none !important;
+}
+
+.dropdown-menu {
+  border: 3px solid #edd6ff !important;
+  border-radius: 20px !important;
+}
+.table-pagination .page-item {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.table-pagination .page-item .page-link {
+  background: #f8eeff !important;
+  border: 0;
+  color: #0e0d39;
+  font-weight: bold;
+  border-radius: 50%;
+}
+.table-pagination .page-item.active .page-link {
+  background-color: #edd6ff !important;
+  color: #0e0d39 !important;
+  border: 0;
+}
+.report .prev .page-link,
+.report .next .page-link {
+  background-color: #edd6ff !important;
+}
+.hr {
+  height: 2px !important;
+  background-color: #9a81ad !important;
+}
+.report-search-wrapper {
+  max-width: 300px;
+}
+.report-search-wrapper img {
+  max-width: 25px;
+}
+.report-search-wrapper .input-group-text {
+  background-color: white;
+  border: 0;
+}
+
+.report-search-wrapper .input-group {
+  padding: 20px 10px;
+  background: #ffffff;
+  box-shadow: 0px 13px 37px rgba(237, 214, 255, 0.4);
+  border-radius: 25px;
+}
 textarea {
   text-align: justify;
   white-space: normal;

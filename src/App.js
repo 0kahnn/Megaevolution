@@ -8,6 +8,7 @@ import Chat from "./Views/Chat/Chat";
 import Report from "./Views/Report/Report";
 import AddReport from "./Views/Report/AddReport";
 import ViewReport from "./Views/Report/ViewReport";
+import ReportList from "./Views/Report/ReportList";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/report" element={<Report />}></Route>
         <Route path="/report/add" element={<AddReport />}></Route>
         <Route path="/report/view" element={<ViewReport />}></Route>
+        <Route path="/report/list" element={<ReportList />}></Route>
 
         {/* {routes.map((el, i) => {
           console.log(el.component);

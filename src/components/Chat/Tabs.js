@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Tabs = () => {
   return (
-    <div className="container-fluid top-banner">
+    <div className="container-fluid top-banner mb-5">
       <div className="row">
         <h3 className="text-center">Resolution Center</h3>
         <div className="chat-links d-flex justify-content-center mt-5">
@@ -10,7 +10,7 @@ const Tabs = () => {
           <NavLink
             exact
             to="/chat"
-            className={(isActive) => (isActive ? "chat-active" : "")}
+            className={(isActive) => (isActive.isActive ? "chat-active" : "")}
           >
             {" "}
             1:1 Chat
@@ -18,7 +18,7 @@ const Tabs = () => {
           <NavLink
             exact
             to="/report"
-            className={(isActive) => (isActive ? "chat-active" : "")}
+            className={(isActive) => (isActive.isActive ? "chat-active" : "")}
           >
             {" "}
             Report

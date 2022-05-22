@@ -12,7 +12,7 @@ const Chat_ = () => {
       {/* resolution start */}
       <div className="container-fluid main-div">
         <div className="container">
-          <h4 className>Do you want 1 : 1 Chat with us?</h4>
+          <h4>Do you want 1 : 1 Chat with us?</h4>
           <div className="cards-section">
             <div className="row">
               <div className="col-md-6">

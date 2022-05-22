@@ -6,6 +6,7 @@ const Chat = () => {
   return (
     <>
       <Layout>
+        <Spacer height="1" />
         <Chat_ />
         <Spacer height="5" />
       </Layout>

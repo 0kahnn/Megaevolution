@@ -1,16 +1,16 @@
 import Layout from "../../components/Common/Layout";
 import Spacer from "../../components/Helper/Spacer";
-import MyReports from "../../components/Report/MyReports";
+import ReportList_ from "../../components/Report/ReportList";
 
-const Report = () => {
+const ReportList = () => {
   return (
     <>
       <Layout>
         <Spacer height="1" />
-        <MyReports />
+        <ReportList_ />
         <Spacer height="5" />
       </Layout>
     </>
   );
 };
-export default Report;
+export default ReportList;
