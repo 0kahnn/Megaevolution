@@ -11,7 +11,7 @@ const ReportSearch = () => {
             aria-describedby="basic-addon2"
           />
           <InputGroup.Text id="basic-addon2">
-            <img src={search_icon} />
+            <img src={search_icon} alt="search_icon" />
           </InputGroup.Text>
         </InputGroup>
       </div>

@@ -2,7 +2,6 @@ import talk from "../../assets/icons/talk.png";
 import discord from "../../assets/icons/discord.png";
 import tick from "../../assets/icons/tick.png";
 import mail from "../../assets/icons/mail.png";
-import { NavLink } from "react-router-dom";
 import Tabs from "./Tabs";
 
 const Chat_ = () => {

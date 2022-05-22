@@ -61,7 +61,7 @@ const ReportTable = ({ isAdmin }) => {
                     <td className="">
                       <span
                         className={`status-badge ${
-                          el.status == "progressing"
+                          el.status === "progressing"
                             ? "progressing-badge"
                             : "solved-badge"
                         }  `}
