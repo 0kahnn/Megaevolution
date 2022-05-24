@@ -1,4 +1,5 @@
 import ReportHeader from "./ReportHeader";
+import "./report.css";
 
 const ViewReport_ = () => {
   return (

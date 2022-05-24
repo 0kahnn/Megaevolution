@@ -1,0 +1,363 @@
+/* report page css */
+.report-section {
+  padding: 5rem 0;
+}
+
+.report {
+  background-color: #fff;
+  border-radius: var(--card-radius);
+  border: 2px solid var(--border-color);
+}
+
+.report .btn-yellow {
+  background: radial-gradient(
+      63.11% 63.11% at 31.97% 19.67%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ffc543;
+
+  border-radius: 25px;
+  color: black;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: bold;
+}
+
+.report h3 {
+  padding-top: 4rem;
+  font-size: 1.5rem !important;
+}
+
+.report span {
+  font-weight: 600;
+  /* font-size: 1.2rem; */
+}
+.report tr:hover {
+  background-color: #edd6ff66;
+}
+.report td,
+th,
+thead,
+tbody {
+  border: 0 !important;
+}
+
+.select-options {
+  padding: 1rem 1rem !important;
+}
+
+.drag-file-box,
+.files-list {
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--card-radius);
+  border: 2px solid #edd6ff;
+  cursor: pointer;
+}
+
+.drag-file-box span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.drag-file-box img {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.drag-file-box h4 {
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+/* 
+div {
+  position: relative;
+  overflow: hidden;
+} */
+
+.file input {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+.file {
+  cursor: pointer;
+  position: relative;
+  color: white !important;
+  width: 100%;
+  max-width: 130px;
+  margin: auto;
+  padding: 0.5rem 1rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 4rem !important;
+}
+
+.form-footer button {
+  border: 0;
+  background: transparent;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: end;
+}
+
+.form-footer button:first-child {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(
+      63.11% 63.11% at 31.97% 19.67%,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0) 69.79%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #ffc543;
+  border-radius: 25px;
+  padding: 1rem 2.2rem !important;
+  margin-right: 2rem;
+}
+
+.form-footer button:last-child {
+  color: #ec595a;
+  font-size: 1.2rem;
+}
+
+/* report reply page */
+.report form input {
+  background-color: transparent !important;
+  /* opacity: 0; */
+  border: 3px solid #edd6ff !important;
+}
+
+.report .form-control::placeholder {
+  color: #8b8b8b !important;
+}
+.report-header {
+  padding: 0rem 6rem;
+  padding-top: 4rem;
+}
+
+.report-header span {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.report th {
+  font-weight: 300;
+  font-size: 14px;
+  color: #0e0d39;
+  padding-bottom: 10px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.report td {
+  font-weight: 500;
+  color: #0e0d39;
+}
+.status-badge {
+  display: inline;
+  padding: 5px 14px;
+  text-align: right;
+  border-radius: 15px;
+  color: white !important;
+  font-size: 13px !important;
+  text-transform: uppercase;
+}
+.progressing-badge {
+  background-color: #5eb5a0;
+}
+
+.solved-badge {
+  background-color: #a8c56a;
+}
+
+.admin-badge {
+  margin-left: 1rem;
+  display: inline;
+  padding: 5px 14px;
+  text-align: right;
+  border-radius: 15px;
+  font-size: 13px !important;
+  background-color: #edd6ff;
+  vertical-align: middle;
+}
+
+.table-dropdown button {
+  background-color: transparent;
+  font-size: 14px;
+  color: #0e0d39;
+  border: 0;
+  padding: 0;
+}
+.table-dropdown button:hover,
+.table-dropdown button:focus,
+.table-dropdown button:active {
+  background-color: transparent !important;
+  color: #0e0d39 !important;
+  box-shadow: none !important;
+}
+
+.dropdown-menu {
+  border: 3px solid #edd6ff !important;
+  border-radius: 20px !important;
+}
+.table-pagination .page-item {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.table-pagination .page-item .page-link {
+  background: #f8eeff !important;
+  border: 0;
+  color: #0e0d39;
+  font-weight: bold;
+  border-radius: 50%;
+}
+.table-pagination .page-item.active .page-link {
+  background-color: #edd6ff !important;
+  color: #0e0d39 !important;
+  border: 0;
+}
+.report .prev .page-link,
+.report .next .page-link {
+  background-color: #edd6ff !important;
+}
+.hr {
+  height: 2px !important;
+  background-color: #9a81ad !important;
+}
+.report-search-wrapper {
+  max-width: 300px;
+}
+.report-search-wrapper img {
+  max-width: 25px;
+}
+.report-search-wrapper .input-group-text {
+  background-color: white;
+  border: 0;
+}
+
+.report-search-wrapper .input-group {
+  padding: 20px 10px;
+  background: #ffffff;
+  box-shadow: 0px 13px 37px rgba(237, 214, 255, 0.4);
+  border-radius: 25px;
+}
+
+.files-list {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  height: 300px;
+  overflow-y: auto !important;
+}
+
+.files-list div {
+  border-bottom: 2px solid #edd6ff;
+  padding: 0.8rem 0;
+}
+
+.files-list::-webkit-scrollbar {
+  width: 8px;
+  padding-right: 2rem;
+}
+
+.files-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #cdc8d7;
+  padding-right: 3rem;
+}
+
+.reply-section .files-list .select,
+input[type="text"],
+textarea {
+  background: #fff;
+  border: 2px solid #edd6ff;
+}
+
+.reply-section .form-footer button:first-child {
+  margin-right: 0;
+  color: var(--titles-color);
+}
+
+/*  */
+
+/* drag-list */
+
+.upload-plus {
+  cursor: pointer;
+  position: relative;
+  border: 0;
+  background: #edd6ff;
+  display: block;
+  width: 100%;
+  max-width: 50px;
+  height: 50px;
+  margin: 1rem auto;
+  border-radius: 50px;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size-note {
+  border: 0 !important;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: -4rem;
+}
+.size-note span {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* mobile section */
+@media only screen and (max-width: 992px) {
+  .reply-section .report-header {
+    display: block !important;
+    text-align: center;
+  }
+
+  .size-note {
+    display: block !important;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .form-footer {
+    position: relative;
+    left: -0.9rem !important;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .form-footer {
+    position: relative;
+    left: 0rem !important;
+  }
+}
+
+@media only screen and (max-width: 1410px) {
+  .report .form-group {
+    display: block !important;
+  }
+}

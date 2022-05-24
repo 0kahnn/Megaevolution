@@ -3,6 +3,8 @@ import { Pagination } from "react-bootstrap";
 import ReportHeader from "./ReportHeader";
 import ReportSearch from "./ReportSearch";
 import ReportTable from "./ReportTable";
+import "./report.css";
+
 const ReportList_ = () => {
   let active = 2;
   let items = [];

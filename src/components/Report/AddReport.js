@@ -2,7 +2,7 @@ import { useState } from "react";
 import DNDUpload from "../Common/DNDUpload";
 import UploadFilesList from "../Common/UploadFilesList";
 import ReportHeader from "./ReportHeader";
-
+import "./report.css";
 const AddReport_ = () => {
   const [files, setFiles] = useState(null);
   const onFileDrop = (acceptedFiles) => {
@@ -15,14 +15,6 @@ const AddReport_ = () => {
   return (
     <>
       <div>
-        {/* resolution start */}
-        {/* <div className="container-fluid top-banner">
-          <div className="container ">
-            <div className="row">
-              <h3 className="text-center">Resolution Center</h3>
-            </div>
-          </div>
-        </div> */}
         <ReportHeader />
         {/* resolution end */}
         <div className="container report-section">

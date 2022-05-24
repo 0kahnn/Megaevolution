@@ -1,0 +1,92 @@
+.chat-tabs .chat-links a {
+  text-decoration: none;
+  color: var(--titles-color);
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+  width: 100%;
+  max-width: 135px;
+  text-align: center;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 8px 0;
+  margin: 0 0.4rem;
+}
+
+.chat-tabs .chat-active {
+  background: #0e0d39;
+  color: #fff !important;
+  border: 2px solid transparent !important;
+}
+
+.chat-wrapper .cards-section {
+  margin-top: 5rem;
+}
+
+.chat-wrapper .card {
+  background: #fff;
+  border-radius: var(--card-radius) !important;
+  border: 2px solid var(--border-color) !important;
+  padding: 2rem 4rem;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  position: relative;
+}
+
+.chat-wrapper .card-one ul li {
+  margin-top: 2rem;
+}
+
+.chat-wrapper .card-one ul li:first-child {
+  margin-top: 0;
+}
+
+.chat-wrapper .card-header {
+  margin-top: -5rem;
+  margin-bottom: 1.3rem !important;
+}
+
+.chat-wrapper .card-header img {
+  box-shadow: var(--border-color) 0px 3px 28px;
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+}
+
+.chat-wrapper h4 {
+  text-align: center;
+  color: var(--titles-color);
+  font-size: 2rem !important;
+}
+
+.chat-wrapper .detail ul li {
+  color: var(--step-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.chat-wrapper .detail p {
+  color: var(--titles-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 992px) {
+  .chat-wrapper .cards-section .col-md-6 {
+    width: 100%;
+    display: block !important;
+  }
+
+  .chat-wrapper .cards-section .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chat-wrapper .cards-section .row .col-md-6:first-child {
+    margin-bottom: 5rem;
+  }
+}

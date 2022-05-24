@@ -15,20 +15,20 @@ const OffCanvasMenu = () => {
   const handleShow = () => setShow(true);
   return (
     <div className="d-md-none">
-      <button onClick={handleShow} class="offcanvas-toggler">
+      <button onClick={handleShow} className="offcanvas-toggler">
         <FaBars />
       </button>
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>
-            <a class="navbar-brand" href="#">
+            <a className="navbar-brand" href="#">
               <img src={logo} />{" "}
             </a>
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <ul class="navbar-nav d-flex justify-content-end">
+          <ul className="navbar-nav d-flex justify-content-end">
             {menuItems.map((el, i) => {
               return el.marketting ? (
                 <li className="nav-item" key={i}>

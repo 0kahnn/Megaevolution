@@ -3,29 +3,30 @@ import usflag from "../../assets/icons/usflag.webp";
 import koreaflag from "../../assets/icons/koreaflag.webp";
 import japanflag from "../../assets/icons/japanflag.webp";
 import { menuItems } from "./menuItems";
+import { NavLink } from "react-router-dom";
 
 const DesktopMenu = () => {
   return (
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav d-flex align-items-center justify-content-end">
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav d-flex align-items-center justify-content-end">
         {menuItems.map((el, i) => {
           return el.marketting ? (
             <li className="nav-item" key={i}>
-              <a className="nav-link marketting" href="#">
+              <NavLink className="nav-link marketting" to={el.link}>
                 <span dangerouslySetInnerHTML={{ __html: el.name }}></span>
-              </a>
+              </NavLink>
             </li>
           ) : el.myspace ? (
             <li className="nav-item" key={i}>
-              <a className="nav-link myspace" href="#">
+              <NavLink className="nav-link myspace" to={el.link}>
                 {el.name}
-              </a>
+              </NavLink>
             </li>
           ) : (
             <li className="nav-item" key={i}>
-              <a className="nav-link " href="#">
+              <NavLink className="nav-link " to={el.link}>
                 {el.name}
-              </a>
+              </NavLink>
             </li>
           );
         })}

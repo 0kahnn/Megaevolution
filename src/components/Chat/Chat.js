@@ -3,13 +3,13 @@ import discord from "../../assets/icons/discord.png";
 import tick from "../../assets/icons/tick.png";
 import mail from "../../assets/icons/mail.png";
 import Tabs from "./Tabs";
-
+import "./chat.css";
 const Chat_ = () => {
   return (
-    <div>
+    <div className="chat-wrapper">
       <Tabs />
       {/* resolution start */}
-      <div className="container-fluid main-div">
+      <div className="container-fluid main-div ">
         <div className="container">
           <h4>Do you want 1 : 1 Chat with us?</h4>
           <div className="cards-section">
@@ -17,7 +17,7 @@ const Chat_ = () => {
               <div className="col-md-6">
                 <div className="card card-one">
                   <div className="card-header bg-transparent border-0 text-center">
-                    <img src={talk} alt="" srcSet />
+                    <img src={talk} alt="" />
                     <h4>Kakao Talk</h4>
                   </div>
                   <div className="detail">
@@ -54,7 +54,7 @@ const Chat_ = () => {
               <div className="col-md-6">
                 <div className="card">
                   <div className="card-header bg-transparent border-0 text-center">
-                    <img src={discord} alt="" srcSet />
+                    <img src={discord} alt="" />
                     <h4>Discord</h4>
                   </div>
                   <div className="detail">

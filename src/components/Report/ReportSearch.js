@@ -1,5 +1,6 @@
 import { FormControl, InputGroup } from "react-bootstrap";
 import search_icon from "../../assets/icons/search_icon.png";
+
 const ReportSearch = () => {
   return (
     <div className="container ">

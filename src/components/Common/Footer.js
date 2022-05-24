@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-sm-12 col-md-6">
             <div className="footer-detail">
-              <img src={logo} alt="" srcSet />
+              <img src={logo} alt="" />
               <p>
                 {" "}
                 perspiciatis natus quasi mollitia? Ratione nulla obcaecati

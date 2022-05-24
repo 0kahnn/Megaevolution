@@ -1,15 +1,33 @@
-import { myReportListData, theadData } from "./data";
 import { DropdownButton, Dropdown, Pagination } from "react-bootstrap";
-const ReportTable = ({ isAdmin }) => {
-  let active = 2;
-  let items = [];
-  for (let number = 1; number <= 5; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active}>
-        {number}
-      </Pagination.Item>
-    );
-  }
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import ReactPaginate from "react-paginate";
+
+const ReportTable = ({ isAdmin, data, theadData }) => {
+  let navigate = useNavigate();
+
+  // Example items, to simulate fetching from another resources.
+  const items = data;
+  // We start with an empty list of items.
+  let itemsPerPage = 10;
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  // Here we use item offsets; we could also use page offsets
+  // following the API or data you're working with.
+  const [itemOffset, setItemOffset] = useState(0);
+
+  useEffect(() => {
+    // Fetch items from another resources.
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(items.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(items.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage]);
+
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % items.length;
+    setItemOffset(newOffset);
+  };
   return (
     <div className="container mt-5">
       <div className="report p-4">
@@ -21,12 +39,15 @@ const ReportTable = ({ isAdmin }) => {
             ""
           ) : (
             <div className="">
-              <button className="buttons btn-yellow">Report</button>
+              <Link to="/report/add" className="buttons btn-yellow">
+                Report
+              </Link>
             </div>
           )}
         </div>
-        <div>
-          <table className="table-responsive w-100 mt-3">
+
+        <div className="table-responsive">
+          <table className="table w-100 mt-3">
             <thead>
               <tr>
                 {theadData.map((el, i) => {
@@ -52,9 +73,13 @@ const ReportTable = ({ isAdmin }) => {
               </tr>
             </thead>
             <tbody>
-              {myReportListData.map((el, i) => {
+              {currentItems.map((el, i) => {
                 return (
-                  <tr>
+                  <tr
+                    className="cursor-pointer"
+                    key={i}
+                    onClick={() => navigate("/report/view")}
+                  >
                     <td className="py-2">{el.date}</td>
                     <td>{el.title}</td>
                     <td>{el.topic}</td>
@@ -76,11 +101,23 @@ const ReportTable = ({ isAdmin }) => {
           </table>
           <hr className="hr" />
           <div className="d-flex justify-content-center table-pagination">
-            <Pagination size="sm">
-              <Pagination.Prev className="prev" />
-              {items}
-              <Pagination.Next className="next" />
-            </Pagination>
+            <ReactPaginate
+              breakLabel="..."
+              nextLabel=">"
+              onPageChange={handlePageClick}
+              pageRangeDisplayed={5}
+              pageCount={pageCount}
+              previousLabel="<"
+              renderOnZeroPageCount={null}
+              className="pagination pagination-sm"
+              pageClassName="page-item"
+              pageLinkClassName="page-link"
+              nextClassName="next page-item"
+              nextLinkClassName="page-link"
+              previousClassName="prev page-item"
+              previousLinkClassName="page-link"
+              activeClassName="active"
+            />
           </div>
         </div>
       </div>

@@ -1,9 +1,10 @@
-import { Col, Nav, Row, Tab } from "react-bootstrap";
+import { Nav, Tab } from "react-bootstrap";
 import FaqAccordion from "./FaqAccordion";
 import { faqData } from "./faqData";
+import "./faq.css";
 const Faq = () => {
   return (
-    <div>
+    <div className="faq-wrapper">
       <div className="container ask-title">
         <h3 className="text-center">Frequently Asked Questions</h3>
       </div>
@@ -14,7 +15,7 @@ const Faq = () => {
           defaultActiveKey={faqData[0]?.title}
         >
           <div className="row">
-            <div className="col-sm-12 col-md-3">
+            <div className="col-sm-12 col-md-4 col-lg-3">
               <div className="side-menu py-3">
                 <Nav variant="pills" className="flex-column">
                   {faqData.map((el, i) => {
@@ -29,7 +30,7 @@ const Faq = () => {
                 </Nav>
               </div>
             </div>
-            <div className="col-sm-12 col-md-9">
+            <div className="col-sm-12 col-md-8 col-lg-9">
               <div className="accordion-wrapper">
                 <Tab.Content>
                   {faqData.map((el, i) => {

@@ -154,17 +154,17 @@ button {
 /* mobile */
 @media only screen and (max-width: 1100px) {
   .row {
-    display: block;
+    /* display: block; */
   }
 
-  .col-md-4 {
+  /* .col-md-4 {
     margin: auto;
     text-align: center;
   }
 
   .col-md-8 {
     margin: auto;
-  }
+  } */
 
   .form {
     margin-top: 3rem;
