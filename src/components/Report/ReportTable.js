@@ -3,11 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 
-const ReportTable = ({ isAdmin, data, theadData }) => {
+const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   let navigate = useNavigate();
 
-  // Example items, to simulate fetching from another resources.
-  const items = data;
+  // console.log(data.filter((el) => el.title.includes(keyword)));
+  let items = data;
   // We start with an empty list of items.
   let itemsPerPage = 10;
   const [currentItems, setCurrentItems] = useState([]);
@@ -17,11 +17,16 @@ const ReportTable = ({ isAdmin, data, theadData }) => {
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
+    items = keyword
+      ? data.filter((el) =>
+          el.title.toLowerCase().includes(keyword.toLowerCase())
+        )
+      : data;
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(items.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(items.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+  }, [itemOffset, itemsPerPage, keyword]);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {

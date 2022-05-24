@@ -1,26 +1,24 @@
-import { Pagination } from "react-bootstrap";
+import { myReportListData, theadData } from "./data";
 
 import ReportHeader from "./ReportHeader";
 import ReportSearch from "./ReportSearch";
 import ReportTable from "./ReportTable";
 import "./report.css";
+import { useState } from "react";
 
 const ReportList_ = () => {
-  let active = 2;
-  let items = [];
-  for (let number = 1; number <= 5; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active}>
-        {number}
-      </Pagination.Item>
-    );
-  }
+  const [keyword, setKeyword] = useState("lorem");
 
   return (
     <div>
       <ReportHeader isAdmin={true} />
-      <ReportSearch />
-      <ReportTable isAdmin={true} />
+      <ReportSearch searchHandler={(e) => setKeyword(e.target.value)} />
+      <ReportTable
+        keyword={keyword}
+        isAdmin={true}
+        data={myReportListData}
+        theadData={theadData}
+      />
     </div>
   );
 };
