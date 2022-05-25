@@ -7,7 +7,6 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   const [sortKey, setSortKey] = useState("");
   let navigate = useNavigate();
 
-  // console.log(data.filter((el) => el.title.includes(keyword)));
   let items = data;
   // We start with an empty list of items.
   let itemsPerPage = 10;
@@ -23,11 +22,6 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
           el.title.toLowerCase().includes(keyword.toLowerCase())
         )
       : data;
-    console.log(sortKey.title, sortKey.keyword);
-
-    // let tempSort = data.sort((a, b) =>
-    //   a.status > b.status ? 1 : b.status > a.status ? -1 : 0
-    // );
 
     let tempSort = sortKey
       ? items.sort((a, b) => {
@@ -41,8 +35,6 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
           );
         })
       : null;
-
-    console.log(items);
 
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
@@ -59,7 +51,6 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   //sort by dropdown
   const sortHandler = (title, keyword) => {
     setSortKey({ title: title, keyword: keyword });
-    // console.log("sortHandler", title, keyword);
   };
   return (
     <div className="container mt-5">
@@ -92,7 +83,7 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
                       >
                         {parentEl.children.map((el, i) => {
                           let { title } = parentEl;
-                          console.log(title);
+
                           return (
                             <Dropdown.Item
                               href="#"
