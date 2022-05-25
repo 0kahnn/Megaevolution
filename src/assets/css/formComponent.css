@@ -41,7 +41,7 @@
 .form-control {
   border: none !important;
 }
-form input {
+.auth form input {
   background: var(--input-back) !important;
   opacity: 0.3;
   border-radius: 10px !important;

@@ -3,7 +3,7 @@ import GoogleIcon from "../../assets/icons/google-icons.png";
 
 const SignUpForm = ({ formToggler }) => {
   return (
-    <div className="form">
+    <div className="form auth">
       <form className="w-100">
         <div className="form-section">
           <div class="form-group">

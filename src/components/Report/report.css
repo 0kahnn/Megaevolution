@@ -30,6 +30,11 @@
   font-size: 1.5rem !important;
 }
 
+.heading-3 {
+  vertical-align: middle !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+}
 .report span {
   font-weight: 600;
   /* font-size: 1.2rem; */
@@ -47,14 +52,17 @@ tbody {
 .select-options {
   padding: 1rem 1rem !important;
 }
-
+.drag-list {
+  width: 100% !important;
+}
 .drag-file-box,
 .files-list {
-  width: 100%;
-  max-width: 900px;
+  width: 100% !important;
+  max-width: 900px !important;
   border-radius: var(--card-radius);
   border: 2px solid #edd6ff;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .drag-file-box span {
@@ -138,6 +146,7 @@ div {
 /* report reply page */
 .report form input {
   background-color: transparent !important;
+
   /* opacity: 0; */
   border: 3px solid #edd6ff !important;
 }
@@ -175,6 +184,7 @@ div {
   color: white !important;
   font-size: 13px !important;
   text-transform: uppercase;
+  font-weight: 500 !important;
 }
 .progressing-badge {
   background-color: #5eb5a0;

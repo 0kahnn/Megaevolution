@@ -13,7 +13,12 @@ const ViewReport_ = () => {
             <div className="col-md-12">
               <div className="report">
                 <div className="report-header d-flex justify-content-between">
-                  <h3 className="text-center pt-0">Your Report</h3>
+                  <h3 className="text-center pt-0">
+                    <span className="heading-3"> Your Report</span>
+                    <span className="status-badge solved-badge ms-3 font-weight-bold">
+                      Solved
+                    </span>
+                  </h3>
                   <span>02.02.2022 PM 7:44</span>
                 </div>
                 <form className="form-inline ">
