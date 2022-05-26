@@ -2,12 +2,15 @@ import { DropdownButton, Dropdown, Pagination } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
+import { FaCaretUp, FaCaretDown } from "react-icons/fa";
+import { customSort, sortByDate } from "../Helper/sorter";
 
 const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   const [sortKey, setSortKey] = useState("");
+  const [isSortByDate, setIsSortByDate] = useState(false);
   let navigate = useNavigate();
 
-  let items = data;
+  let items = [...data];
   // We start with an empty list of items.
   let itemsPerPage = 10;
   const [currentItems, setCurrentItems] = useState([]);
@@ -17,24 +20,44 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    items = keyword
-      ? data.filter((el) =>
-          el.title.toLowerCase().includes(keyword.toLowerCase())
-        )
-      : data;
+    // search
+    // items = keyword
+    //   ? items.filter((el) =>
+    //       el.title.toLowerCase().includes(keyword.toLowerCase())
+    //     )
+    //   : items;
+    console.log(keyword);
 
-    let tempSort = sortKey
-      ? items.sort((a, b) => {
-          return (
-            (b[sortKey.title.toLowerCase()].toLowerCase() ===
-              sortKey.keyword.toLowerCase()) -
-              (a[sortKey.title.toLowerCase()].toLowerCase() ===
-                sortKey.keyword.toLowerCase()) ||
-            b[sortKey.title.toLowerCase()].toLowerCase() -
-              a[sortKey.title.toLowerCase()].toLowerCase()
-          );
-        })
-      : null;
+    items =
+      keyword && isAdmin
+        ? items.filter((item) => {
+            return Object.entries(item).some(([key, v]) => {
+              return (
+                key !== "status" &&
+                key !== "topic" &&
+                v.toLowerCase().includes(keyword.toLowerCase())
+              );
+            });
+          })
+        : items;
+
+    // items = keyword
+    //   ? items.filter((item) => {
+    //       return Object.entries(item).some(([key, v]) => {
+    //         console.log(v);
+    //         return (
+    //           key !== "status" && v.includes(keyword.toLowerCase())
+    //           // new RegExp(`\\b${keyword.toLowerCase()}\\b`, "i").test(v)
+    //         );
+    //       });
+    //     })
+    //   : items;
+    console.log(items);
+
+    //sort
+    sortKey && sortKey.keyword === "All"
+      ? (items = [...data])
+      : sortKey && customSort(sortKey, items, isSortByDate);
 
     // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
@@ -52,9 +75,13 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   const sortHandler = (title, keyword) => {
     setSortKey({ title: title, keyword: keyword });
   };
+  const dateSortHandler = (title) => {
+    setIsSortByDate(!isSortByDate);
+    setSortKey({ title: title, keyword: "" });
+  };
   return (
     <div className="container mt-5">
-      <div className="report p-4">
+      <div className="report cp-3">
         <div className="d-flex justify-content-between">
           <div className="">
             <h3 className="pt-0">My Report List</h3>
@@ -83,7 +110,6 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
                       >
                         {parentEl.children.map((el, i) => {
                           let { title } = parentEl;
-
                           return (
                             <Dropdown.Item
                               href="#"
@@ -95,6 +121,11 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
                           );
                         })}
                       </DropdownButton>
+                    </th>
+                  ) : parentEl.title === "Date" ? (
+                    <th key={i} onClick={() => dateSortHandler(parentEl.title)}>
+                      {parentEl.title}{" "}
+                      {isSortByDate ? <FaCaretUp /> : <FaCaretDown />}
                     </th>
                   ) : (
                     <th key={i}>{parentEl.title}</th>
@@ -111,7 +142,15 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
                     onClick={() => navigate("/report/view")}
                   >
                     <td className="py-3">{el.date}</td>
-                    <td className="py-3">{el.title}</td>
+                    <td className="py-3 text-hover-underline">{el.title}</td>
+                    {isAdmin ? (
+                      <>
+                        <td className="py-3">{el.requestor}</td>
+                        <td className="py-3">{el.requestorID}</td>
+                      </>
+                    ) : (
+                      ""
+                    )}
                     <td className="py-3">{el.topic}</td>
                     <td className="py-3">
                       <span

@@ -2,7 +2,10 @@ import { useState } from "react";
 import DNDUpload from "../Common/DNDUpload";
 import UploadFilesList from "../Common/UploadFilesList";
 import ReportHeader from "./ReportHeader";
+import { useNavigate } from "react-router-dom";
+
 import "./report.css";
+
 const AddReport_ = () => {
   const [files, setFiles] = useState(null);
   const onFileDrop = (acceptedFiles) => {
@@ -11,12 +14,17 @@ const AddReport_ = () => {
   const singleFileUploadHandler = (e) => {
     setFiles((files) => [...files, e.target.files[0]]);
   };
+  const doSomething = () => {
+    console.log("doSomething");
+  };
+  const navigate = useNavigate();
 
   return (
     <>
       <div>
         <ReportHeader />
         {/* resolution end */}
+
         <div className="container report-section">
           <div className="row d-flex justify-content-center">
             <div className="col-md-12">
@@ -108,7 +116,9 @@ const AddReport_ = () => {
                   </div>
                   <div className="form-footer">
                     <button>Submit</button>
-                    <button>Cancel</button>
+                    <button type="button" onClick={() => navigate(-1)}>
+                      Cancel
+                    </button>
                   </div>
                 </form>
               </div>

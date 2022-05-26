@@ -1,4 +1,4 @@
-import { myReportListData, theadData } from "./data";
+import { adminReportListData, tHeadAdminData } from "./data";
 
 import ReportHeader from "./ReportHeader";
 import ReportSearch from "./ReportSearch";
@@ -16,8 +16,8 @@ const ReportList_ = () => {
       <ReportTable
         keyword={keyword}
         isAdmin={true}
-        data={myReportListData}
-        theadData={theadData}
+        data={adminReportListData}
+        theadData={tHeadAdminData}
       />
     </div>
   );

@@ -1,7 +1,9 @@
 import ReportHeader from "./ReportHeader";
 import "./report.css";
+import { useNavigate } from "react-router-dom";
 
 const ViewReport_ = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div>
@@ -82,7 +84,9 @@ const ViewReport_ = () => {
                     />
                   </div>
                   <div className="form-footer">
-                    <button>Close</button>
+                    <button type="button" onClick={() => navigate(-1)}>
+                      Close
+                    </button>
                   </div>
                 </form>
               </div>

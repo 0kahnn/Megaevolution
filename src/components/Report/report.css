@@ -233,7 +233,7 @@ div {
   border: 0;
   color: #0e0d39;
   font-weight: bold;
-  border-radius: 50%;
+  border-radius: 50% !important;
 }
 .table-pagination .page-item.active .page-link {
   background-color: #edd6ff !important;

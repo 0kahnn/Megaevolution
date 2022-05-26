@@ -417,6 +417,15 @@ textarea {
 .copyright-links ul li:last-child {
   margin-right: 0;
 }
+.cp-3 {
+  padding: 3rem !important;
+}
+.text-hover-underline:hover {
+  text-decoration: underline;
+}
+.font-weight-bold {
+  font-weight: bold !important;
+}
 
 /*  */
 
