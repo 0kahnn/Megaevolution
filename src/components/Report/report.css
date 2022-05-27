@@ -144,11 +144,12 @@ div {
 }
 
 /* report reply page */
-.report form input {
-  background-color: transparent !important;
+.report form input,
+.report form textarea {
+  background-color: #faf3ff !important;
 
   /* opacity: 0; */
-  border: 3px solid #edd6ff !important;
+  /* border: 3px solid #edd6ff !important; */
 }
 
 .report .form-control::placeholder {
@@ -295,8 +296,7 @@ div {
 }
 
 .reply-section .files-list .select,
-input[type="text"],
-textarea {
+input[type="text"] {
   background: #fff;
   border: 2px solid #edd6ff;
 }
