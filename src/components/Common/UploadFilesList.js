@@ -1,15 +1,25 @@
-const UploadFilesList = ({ files, singleFileUploadHandler }) => {
+import { FaTimes } from "react-icons/fa";
+const UploadFilesList = ({ files, singleFileUploadHandler, removeHandler }) => {
   return (
-    <div class="form-group drag-list">
-      <div class="files-list border-0">
+    <div className="form-group drag-list">
+      <div className="files-list border-0">
         {files.map((el, i) => {
           return (
             <div
-              class="d-flex justify-content-between align-items-center"
+              className="d-flex justify-content-between align-items-center"
               key={i}
             >
               <span>{el.name}</span>
-              <span>{el.size / 100} kb</span>
+              <span>
+                {el.size / 100} kb{" "}
+                <button
+                  className="close-icon ms-4"
+                  type="button"
+                  onClick={() => removeHandler(el)}
+                >
+                  <FaTimes />
+                </button>
+              </span>
             </div>
           );
         })}
@@ -20,7 +30,7 @@ const UploadFilesList = ({ files, singleFileUploadHandler }) => {
         </div>
 
         {/* <span className="upload-plus">+</span> */}
-        <div class="size-note">
+        <div className="size-note">
           <span>* Total Max File Size is 500MB</span>
         </div>
       </div>

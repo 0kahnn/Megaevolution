@@ -14,8 +14,12 @@ const AddReport_ = () => {
   const singleFileUploadHandler = (e) => {
     setFiles((files) => [...files, e.target.files[0]]);
   };
-  const doSomething = () => {
-    console.log("doSomething");
+  const removeFileHandler = (file) => {
+    let tempFiles = [...files];
+    let updatedFiles = tempFiles.filter((el) => {
+      return el !== file;
+    });
+    setFiles(updatedFiles);
   };
   const navigate = useNavigate();
 
@@ -106,6 +110,7 @@ const AddReport_ = () => {
                       <UploadFilesList
                         files={files}
                         singleFileUploadHandler={singleFileUploadHandler}
+                        removeHandler={removeFileHandler}
                       />
                     ) : (
                       <DNDUpload

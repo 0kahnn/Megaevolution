@@ -176,6 +176,9 @@ div {
   font-weight: 500;
   color: #0e0d39;
 }
+.order-number {
+  color: #70707a !important;
+}
 .status-badge {
   display: inline;
   padding: 5px 14px;

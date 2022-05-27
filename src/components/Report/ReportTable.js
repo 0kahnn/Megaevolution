@@ -2,8 +2,13 @@ import { DropdownButton, Dropdown, Pagination } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
-import { FaCaretUp, FaCaretDown } from "react-icons/fa";
-import { customSort, sortByDate } from "../Helper/sorter";
+import {
+  FaCaretUp,
+  FaCaretDown,
+  FaAngleRight,
+  FaAngleLeft,
+} from "react-icons/fa";
+import { customSort } from "../Helper/sorter";
 
 const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   const [sortKey, setSortKey] = useState("");
@@ -20,14 +25,7 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    // search
-    // items = keyword
-    //   ? items.filter((el) =>
-    //       el.title.toLowerCase().includes(keyword.toLowerCase())
-    //     )
-    //   : items;
-    console.log(keyword);
-
+    // search for admin
     items =
       keyword && isAdmin
         ? items.filter((item) => {
@@ -41,18 +39,18 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
           })
         : items;
 
-    // items = keyword
-    //   ? items.filter((item) => {
-    //       return Object.entries(item).some(([key, v]) => {
-    //         console.log(v);
-    //         return (
-    //           key !== "status" && v.includes(keyword.toLowerCase())
-    //           // new RegExp(`\\b${keyword.toLowerCase()}\\b`, "i").test(v)
-    //         );
-    //       });
-    //     })
-    //   : items;
-    console.log(items);
+    // search for USer
+    items =
+      keyword && !isAdmin
+        ? items.filter((item) => {
+            return Object.entries(item).some(([key, v]) => {
+              return (
+                (key === "title" || key === "topic" || key === "orderNumber") &&
+                v.toLowerCase().includes(keyword.toLowerCase())
+              );
+            });
+          })
+        : items;
 
     //sort
     sortKey && sortKey.keyword === "All"
@@ -151,7 +149,17 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
                     ) : (
                       ""
                     )}
-                    <td className="py-3">{el.topic}</td>
+                    <td className="py-3">
+                      {el.topic}{" "}
+                      {el.orderNumber && (
+                        <>
+                          <br />
+                          <small className="order-number">
+                            {el.orderNumber}
+                          </small>
+                        </>
+                      )}
+                    </td>
                     <td className="py-3">
                       <span
                         className={`status-badge ${
@@ -172,11 +180,11 @@ const ReportTable = ({ isAdmin, data, theadData, keyword }) => {
           <div className="d-flex justify-content-center table-pagination">
             <ReactPaginate
               breakLabel="..."
-              nextLabel=">"
+              nextLabel={<FaAngleRight />}
               onPageChange={handlePageClick}
               pageRangeDisplayed={5}
               pageCount={pageCount}
-              previousLabel="<"
+              previousLabel={<FaAngleLeft />}
               renderOnZeroPageCount={null}
               className="pagination pagination-sm"
               pageClassName="page-item"

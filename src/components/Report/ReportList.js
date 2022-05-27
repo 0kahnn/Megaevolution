@@ -7,7 +7,7 @@ import "./report.css";
 import { useState } from "react";
 
 const ReportList_ = () => {
-  const [keyword, setKeyword] = useState("lorem");
+  const [keyword, setKeyword] = useState("");
 
   return (
     <div>

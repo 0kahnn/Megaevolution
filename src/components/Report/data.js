@@ -92,6 +92,7 @@ export const myReportListData = [
     date: "May 6 2022 11:00:00 AM",
     title: "Lorem Ipsum Dolor",
     topic: "Report an order",
+    orderNumber: "Order #123",
     status: "In Progress",
   },
   {
@@ -104,6 +105,7 @@ export const myReportListData = [
     date: "May 6 2022 11:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
     topic: "Report an order",
+    orderNumber: "Order #123",
     status: "solved",
   },
   {
@@ -122,6 +124,7 @@ export const myReportListData = [
     date: "Mar 12 2012 10:00:00 AM",
     title: "Lorem Ipsum Dolor",
     topic: "Report an order",
+    orderNumber: "Order#125",
     status: "In Progress",
   },
   {
@@ -146,12 +149,14 @@ export const myReportListData = [
     date: "Mar 12 2012 10:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
     topic: "Report an order",
+    orderNumber: "Order#125",
     status: "solved",
   },
   {
     date: "May 6 2022 11:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
     topic: "Report an order",
+    orderNumber: "Order#121",
     status: "In Progress",
   },
   {
@@ -170,18 +175,21 @@ export const myReportListData = [
     date: "Mar 12 2012 10:00:00 AM",
     title: "Lorem Ipsum Dolor",
     topic: "Report an order",
+    orderNumber: "Order#121",
     status: "In Progress",
   },
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "Lorem Ipsum Dolor",
     topic: "Report an order",
+    orderNumber: "Order #123",
     status: "In Progress",
   },
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
     topic: "Report an order",
+    orderNumber: "Order #123",
     status: "In Progress",
   },
   {
@@ -310,15 +318,15 @@ export const adminReportListData = [
   {
     date: "May 6 2022 11:00:00 AM",
     title: "Lorem Ipsum Dolor",
-    requestor: "John Doe",
+    requestor: "Lee.S.C",
     requestorID: "12354",
-    topic: "Report an order",
+    topic: "General Support",
     status: "In Progress",
   },
   {
     date: "May 6 2022 11:00:00 AM",
     title: "Lorem Ipsum Dolor",
-    requestor: "John Doe",
+    requestor: "Lee.S.C",
     requestorID: "12354",
     topic: "General Support",
     status: "In Progress",
@@ -326,9 +334,10 @@ export const adminReportListData = [
   {
     date: "May 6 2022 11:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
-    requestor: "John Doe",
+    requestor: "Lee.S.C",
     requestorID: "12354",
     topic: "Report an order",
+    orderNumber: "Order #123",
     status: "solved",
   },
   {
@@ -350,15 +359,16 @@ export const adminReportListData = [
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "Lorem Ipsum Dolor",
-    requestor: "John Doe",
+    requestor: "Lee.S.C",
     requestorID: "12354",
     topic: "Report an order",
+    orderNumber: "Order #126",
     status: "In Progress",
   },
   {
     date: "May 6 2022 11:00:00 AM",
     title: "Lorem Ipsum Dolor",
-    requestor: "John Doe",
+    requestor: "Lee.S.C",
     requestorID: "12354",
     topic: "General Support",
     status: "In Progress",
@@ -374,7 +384,7 @@ export const adminReportListData = [
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
-    requestor: "John Doe",
+    requestor: "Lee.G.J",
     requestorID: "12354",
     topic: "General Support",
     status: "solved",
@@ -382,9 +392,10 @@ export const adminReportListData = [
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
-    requestor: "John Doe",
+    requestor: "Lee.G.J",
     requestorID: "12354",
     topic: "Report an order",
+    orderNumber: "Order #126",
     status: "solved",
   },
   {
@@ -393,6 +404,7 @@ export const adminReportListData = [
     requestor: "John Doe",
     requestorID: "12354",
     topic: "Report an order",
+    orderNumber: "Order #121",
     status: "In Progress",
   },
   {
@@ -414,25 +426,28 @@ export const adminReportListData = [
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "Lorem Ipsum Dolor",
-    requestor: "John Doe",
+    requestor: "Lee.G.J",
     requestorID: "12354",
     topic: "Report an order",
+    orderNumber: "Order #123",
     status: "In Progress",
   },
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "Lorem Ipsum Dolor",
-    requestor: "John Doe",
+    requestor: "Lee.G.J",
     requestorID: "12354",
     topic: "Report an order",
+    orderNumber: "Order #123",
     status: "In Progress",
   },
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "quia dolor sit amet, consectetur, ",
-    requestor: "John Doe",
+    requestor: "Lee.G.J",
     requestorID: "12354",
     topic: "Report an order",
+    orderNumber: "Order #121",
     status: "In Progress",
   },
   {
@@ -462,7 +477,7 @@ export const adminReportListData = [
   {
     date: "Mar 12 2012 10:00:00 AM",
     title: "Neque porro quisquam est qui dolorem ",
-    requestor: "John Doe",
+    requestor: "Lee.G.J",
     requestorID: "12354",
     topic: "Account Issues",
     status: "In Progress",
