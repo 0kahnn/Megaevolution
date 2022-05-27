@@ -276,6 +276,7 @@ h3 {
 
 .form-inline .select,
 input[type="text"],
+.dropdown,
 textarea {
   width: 100%;
   max-width: 900px;
@@ -438,6 +439,30 @@ textarea {
   line-height: 17px;
   width: 25px;
   height: 25px;
+}
+
+.plan-dropdown {
+  padding: 0 !important;
+}
+.p-_8 {
+  padding: 0.8rem !important;
+}
+.plan-dropdown button,
+.plan-dropdown button:hover,
+.plan-dropdown button:focus,
+.plan-dropdown button:active {
+  background-color: transparent !important;
+  color: #0e0d39 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+.subdropdown.show {
+  transform: translate(160px, 15px) !important;
 }
 /*  */
 
