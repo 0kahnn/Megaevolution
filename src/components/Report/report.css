@@ -223,6 +223,12 @@ div {
   color: #0e0d39 !important;
   box-shadow: none !important;
 }
+.custom-dropdown {
+  width: 100% !important;
+  background: #faf3ff !important;
+
+  padding: 1rem 0.8rem !important;
+}
 
 .dropdown-menu {
   border: 3px solid #edd6ff !important;

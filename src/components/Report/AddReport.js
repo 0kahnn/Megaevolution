@@ -64,7 +64,7 @@ const AddReport_ = () => {
                     <span>Topic</span>
                     <Dropdown
                       autoClose="outside"
-                      className="plan-dropdown p-_8"
+                      className="plan-dropdown p-_8 custom-dropdown"
                     >
                       <Dropdown.Toggle id="dropdown-basic">
                         {selectedTopic && selectedTopic}

@@ -276,7 +276,6 @@ h3 {
 
 .form-inline .select,
 input[type="text"],
-.dropdown,
 textarea {
   width: 100%;
   max-width: 900px;
