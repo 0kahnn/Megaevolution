@@ -115,7 +115,7 @@ div {
 
 .form-footer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .form-footer button:first-child {
@@ -224,6 +224,7 @@ div {
   box-shadow: none !important;
 }
 .custom-dropdown {
+  max-width: 900px;
   width: 100% !important;
   background: #faf3ff !important;
 
@@ -233,6 +234,10 @@ div {
 .dropdown-menu {
   border: 3px solid #edd6ff !important;
   border-radius: 20px !important;
+}
+.desc-toggler {
+  width: 100%;
+  text-align: left;
 }
 .table-pagination .page-item {
   margin-left: 8px;
@@ -338,7 +343,7 @@ input[type="text"] {
 .size-note {
   border: 0 !important;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   position: relative;
   top: -4rem;
 }
