@@ -62,7 +62,7 @@ tbody {
   border-radius: var(--card-radius);
   border: 2px solid #edd6ff;
   cursor: pointer;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 
 .drag-file-box span {
@@ -380,7 +380,7 @@ input[type="text"] {
   }
 }
 
-@media only screen and (max-width: 1410px) {
+@media only screen and (max-width: 1400px) {
   .report .form-group {
     display: block !important;
   }
